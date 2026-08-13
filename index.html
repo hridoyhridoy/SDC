@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindaco Bill Voucher</title>
+</head>
+
+<body>
+
+<script>
+window.addEventListener("load", function () {
+
+    const download = confirm(
+        "Bill Voucher is ready.\n\nDo you want to download the voucher?"
+    );
+
+    if (download) {
+        const link = document.createElement("a");
+
+        link.href = "./bill-voucher.jpg";
+        link.download = "Sindaco_Bill_Voucher_4_April_2026.jpg";
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+});
+</script>
+
+<h2> Sindaco Automotive Industry Co., Ltd.</h2>
+<p>Your Bill Voucher is available for download.</p>
+
+<a href="./bill-voucher.jpg"
+   download="Sindaco_Bill_Voucher_4_April_2026.jpg">
+   Download Voucher
+</a>
+
+</body>
+</html>
